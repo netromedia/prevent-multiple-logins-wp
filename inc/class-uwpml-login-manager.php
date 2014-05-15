@@ -63,7 +63,8 @@ class UWPML_Login_Manager{
      * @return void action hook returns nothing
      */
     public function clear_auth_transient(){
-        $transient = 'uwpml_' . get_current_user_id();
+	$current_user = wp_get_current_user();
+        $transient = 'uwpml_' . $current_user->ID;
         delete_transient($transient);
     }
     
@@ -148,3 +149,4 @@ class UWPML_Login_Manager{
 // Transient Check
 // var_dump(get_transient('uwpml_' . get_current_user_id()));
 ?>
+
