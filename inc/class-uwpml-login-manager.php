@@ -149,4 +149,3 @@ class UWPML_Login_Manager{
 // Transient Check
 // var_dump(get_transient('uwpml_' . get_current_user_id()));
 ?>
-
